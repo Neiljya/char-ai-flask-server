@@ -5,7 +5,7 @@ from characterai import PyCAI
 
 app = Flask(__name__)
 
-CORS(app, resources={"r/*": {"origins:": "*", "allow_headers":["Content-Type"]}})
+CORS(app, resources={r"/*": {"origins": "*", "allow_headers": ["Content-Type"]}})
 
 token = os.getenv('CHARACTER_AI_TOKEN')
 char_id = os.getenv('CHARACTER_AI_ID')
