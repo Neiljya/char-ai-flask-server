@@ -1,0 +1,4 @@
+flask~=3.0.2
+characterai~=0.8.0
+websockets~=12.0
+typing-extensions~=4.9.0
