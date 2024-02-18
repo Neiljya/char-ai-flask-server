@@ -1,8 +1,11 @@
 import os
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from characterai import PyCAI
 
 app = Flask(__name__)
+
+CORS(app, resources={"r/*": {"origins:": "*", "allow_headers":["Content-Type"]}})
 
 token = os.getenv('CHARACTER_AI_TOKEN')
 char_id = os.getenv('CHARACTER_AI_ID')
